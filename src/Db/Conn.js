@@ -2,10 +2,13 @@ const mongoose = require("mongoose");
 
 (async function connectToDatabase() {
   try {
-    await mongoose.connect(process.env.DB, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(
+      "mongodb+srv://parasnaulia645:nx7w2cQ4pHnjfTbl@cluster0.ivdbulp.mongodb.net/parasnaulia645",
+      {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      }
+    );
     console.log("Connection is successful");
   } catch (e) {
     console.log("Database Connection error: " + e);
